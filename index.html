@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backyard Story | Media Arts</title>
+    <meta
+      name="description"
+      content="A one-page visual and audio story told through backyard photos, ambient sound, and narration."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Manrope:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="hero" id="top">
+      <p class="kicker">Media Arts Story Project</p>
+      <h1>Our Backyard, One Day at a Time</h1>
+      <p class="lead">
+        This is our backyard story, told with photos, real backyard sounds, and narration.
+      </p>
+      <a class="cta" href="#story">Start the Story</a>
+    </header>
+
+    <main>
+      <section class="section" id="story">
+        <div class="section-heading">
+          <p class="section-label">Part 1</p>
+          <h2>Text Narrative</h2>
+        </div>
+        <div class="panel text-panel">
+          <p>
+            In the morning, our backyard is usually super quiet. The grass is still damp,
+            and little sounds stand out way more.
+          </p>
+          <p>
+            As the day goes on, everything changes a bit. The light moves across the fence,
+            the trees look different, and normal stuff starts feeling important.
+          </p>
+          <p>
+            By evening, this is where our family hangs out and slows down. We notice details
+            we usually ignore. That was the point of this project: show that a place we see every
+            day can still feel new.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="audio">
+        <div class="section-heading">
+          <p class="section-label">Part 2</p>
+          <h2>Sound Layers</h2>
+        </div>
+        <div class="audio-grid">
+          <article class="panel audio-card">
+            <h3>Soundscape</h3>
+            <p class="audio-note">Raw backyard audio from our place.</p>
+            <audio controls preload="metadata">
+              <source src="MediaArts Backyard.m4a" type="audio/mp4" />
+              Your browser does not support audio playback.
+            </audio>
+          </article>
+
+          <article class="panel audio-card">
+            <h3>Oral Storytelling</h3>
+            <p class="audio-note">My narration of our family's backyard story.</p>
+            <audio controls preload="metadata">
+              <source src="MediaArts BackyardNarration.m4a" type="audio/mp4" />
+              Your browser does not support audio playback.
+            </audio>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="gallery-section">
+        <div class="section-heading">
+          <p class="section-label">Part 3</p>
+          <h2>Photo Sequence</h2>
+        </div>
+        <p class="gallery-intro">
+          Twenty original backyard photos composed as a visual timeline.
+        </p>
+        <div class="gallery" id="gallery" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">Top</button>
+
+    <dialog id="lightbox" class="lightbox">
+      <form method="dialog">
+        <button class="close-lightbox" aria-label="Close photo view">Close</button>
+      </form>
+      <div class="lightbox-nav" aria-label="Image navigation controls">
+        <button class="lightbox-arrow" id="lightboxPrev" aria-label="View previous photo">
+          &#8592;
+        </button>
+        <button class="lightbox-arrow" id="lightboxNext" aria-label="View next photo">
+          &#8594;
+        </button>
+      </div>
+      <figure>
+        <img id="lightboxImage" alt="Expanded backyard photograph" />
+        <figcaption id="lightboxCaption"></figcaption>
+      </figure>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
